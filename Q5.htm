@@ -37,6 +37,7 @@
             var x=f.from.value;
             var y=f.to.value;
             var i, sum=0;
+            var j, userChoice;
             if(x=="" || y==""){
                 alert("Please enter value for FROM and TO!");
             }
@@ -51,7 +52,6 @@
                 alert("The from value should be lesser than the to value!");
             }
             else{for(i=x;i<y+1;i++){
-                
                 sum=sum + i;
             }
             }
