@@ -10,6 +10,36 @@
                 font-weight: bold;
                 text-align: center;
             }
+            ul{
+                list-style-type: square;
+            }
+            ol{
+                list-style-type:lower-roman;
+                background-color: silver;
+                color: olive;
+                font-family: cursive;
+                font-size: 1.5em;
+                font-style: italic; 
+                padding: 20px 0px 20px 200px;
+            }
+            a{
+                color: olive;
+                font-family: cursive;
+                font-size: 1.5em;
+                font-style: italic; 
+            }
+            ul > li :hover{
+                background-color: orange;
+            }
+            li.h :hover{
+                background-color: orange;
+            }
+            span.sp1:hover{
+                background-color: orange;
+            }
+            body{
+                margin: 0px 250px 0px 250px;
+            }
         </style>
 
     </head>
@@ -17,6 +47,17 @@
     <body>
         <!-- Your HTML goes here -->
         <h1> Summer 2017 Exam - Index Page</h1>
+        <ol>
+            <li><a href="Q2.htm"><span class="sp1">Question 2</div></a>
+                <ul>
+                    <li><a href="Q2.htm#retina">Retina Display</a></li>
+                    <li><a href="Q2.htm#criticism">Criticism</a></li>
+                </ul>
+            </li>
+            <li class="h"><a href="Q3.htm">Question 3</a></li>
+            <li class="h"><a href="Q4.htm">Question 4</a></li>
+            <li class="h"><a href="Q5.htm">Question 5</a></li>
+        </ol>
 
     </body>
 

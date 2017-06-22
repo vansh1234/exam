@@ -44,7 +44,33 @@
         </style>
 
         <script type="text/javascript">
-
+        function Convert(){
+            var f=document.getElementById("f1");
+            var miles=f.m.value;
+            var kilo=f.km.value;
+            if(miles=="" && kilo==""){
+                alert("Please enter value for Kilometers or Miles!");
+            }
+            else if(miles !=""){
+                if (isNaN(miles)){
+                    alert("You must only enter a number!");
+                }
+                else{
+                miles=parseFloat(miles);
+                f.km.value=miles*(3/2);
+            }
+            }
+            else if(kilo !=""){
+                if (isNaN(kilo)){
+                    alert("You must only enter a number!");
+                }
+                else {
+                kilo=parseFloat(kilo);
+                f.m.value=kilo*(2/3);
+            }
+            }
+            return false;
+        }
         </script>
     </head>
 
@@ -63,14 +89,14 @@
         </p>
         <hr />
         <h2> Convert and Smile </h2>
-        <form method="post">
+        <form id="f1" method="post">
             <p>
 
                 Kilometers: <input type="text" name="km" size="10" /> Miles: <input type="text" name="m" size="10" />
 
             </p>
             <p>
-                <button>Convert</button>
+                <button onclick="return Convert()">Convert</button>
 
             </p>
             <hr />

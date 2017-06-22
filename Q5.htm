@@ -31,8 +31,34 @@
                 text-align: left;
             }
         </style>
-        <script>
-
+        <script type="text/javascript">
+        function sum(){
+            var f=document.getElementById("form1");
+            var x=f.from.value;
+            var y=f.to.value;
+            var i, sum=0;
+            if(x=="" || y==""){
+                alert("Please enter value for FROM and TO!");
+            }
+            else if(isNaN(x) || isNaN(y)){
+                alert("Enter only numbers!");
+            }
+            else{
+            x=parseFloat(x);
+            y=parseFloat(y);
+            
+            if(x>y){
+                alert("The from value should be lesser than the to value!");
+            }
+            else{for(i=x;i<y+1;i++){
+                
+                sum=sum + i;
+            }
+            }
+            document.getElementById("result").innerHTML=sum;
+            return false;
+        }
+        }
         </script>
     </head>
 
@@ -59,7 +85,7 @@
 
             </p>
             <p>
-                <input type="submit" name="Sum" value="SUM">
+                <input onclick="return sum()" type="submit" name="Sum" value="SUM">
                 <input type="reset" name="reset" value="CLEAR">
             </p>
             <p>The sum is <span id="result"></span>.</p>
